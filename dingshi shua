@@ -1,0 +1,23 @@
+# -*- coding: UTF-8 -*-
+import requests
+import json
+import re
+import time, datetime
+from enum import Enum
+
+
+
+
+
+def get_New_Msg():
+    try:
+        req = requests.get("https://api.jinse.com/v4/live/list?reading=false&limit=1", headers=HEADER).text
+        # 如果结果里面有news关键字代表请求成功
+        print(req)
+    except:
+        print("脚本错误")
+
+
+while True:
+    msg = get_New_Msg()
+    time.sleep(3600000)
