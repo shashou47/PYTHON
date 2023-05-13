@@ -20,4 +20,4 @@ def get_New_Msg():
 
 while True:
     msg = get_New_Msg()
-    time.sleep(3600000)
+    time.sleep(3660)
